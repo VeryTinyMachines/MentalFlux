@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		517EFBDE1BA651FD0038A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBDD1BA651FD0038A119 /* AppDelegate.swift */; };
+		517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBDF1BA651FD0038A119 /* ViewController.swift */; };
+		517EFBE31BA651FD0038A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517EFBE11BA651FD0038A119 /* Main.storyboard */; };
+		517EFBE51BA651FD0038A119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517EFBE41BA651FD0038A119 /* Assets.xcassets */; };
+		517EFBE81BA651FD0038A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */; };
+		517EFBF31BA651FD0038A119 /* MentalFluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBF21BA651FD0038A119 /* MentalFluxTests.swift */; };
+		517EFBFE1BA651FD0038A119 /* MentalFluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		517EFBEF1BA651FD0038A119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 517EFBD21BA651FD0038A119 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 517EFBD91BA651FD0038A119;
+			remoteInfo = MentalFlux;
+		};
+		517EFBFA1BA651FD0038A119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 517EFBD21BA651FD0038A119 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 517EFBD91BA651FD0038A119;
+			remoteInfo = MentalFlux;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		517EFBDA1BA651FD0038A119 /* MentalFlux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentalFlux.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		517EFBDD1BA651FD0038A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		517EFBDF1BA651FD0038A119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		517EFBE21BA651FD0038A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		517EFBE41BA651FD0038A119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		517EFBE71BA651FD0038A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		517EFBE91BA651FD0038A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		517EFBEE1BA651FD0038A119 /* MentalFluxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalFluxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		517EFBF21BA651FD0038A119 /* MentalFluxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalFluxTests.swift; sourceTree = "<group>"; };
+		517EFBF41BA651FD0038A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		517EFBF91BA651FD0038A119 /* MentalFluxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalFluxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalFluxUITests.swift; sourceTree = "<group>"; };
+		517EFBFF1BA651FD0038A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		517EFBD71BA651FD0038A119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		517EFBEB1BA651FD0038A119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		517EFBF61BA651FD0038A119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		517EFBD11BA651FD0038A119 = {
+			isa = PBXGroup;
+			children = (
+				517EFBDC1BA651FD0038A119 /* MentalFlux */,
+				517EFBF11BA651FD0038A119 /* MentalFluxTests */,
+				517EFBFC1BA651FD0038A119 /* MentalFluxUITests */,
+				517EFBDB1BA651FD0038A119 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		517EFBDB1BA651FD0038A119 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				517EFBDA1BA651FD0038A119 /* MentalFlux.app */,
+				517EFBEE1BA651FD0038A119 /* MentalFluxTests.xctest */,
+				517EFBF91BA651FD0038A119 /* MentalFluxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		517EFBDC1BA651FD0038A119 /* MentalFlux */ = {
+			isa = PBXGroup;
+			children = (
+				517EFBDD1BA651FD0038A119 /* AppDelegate.swift */,
+				517EFBDF1BA651FD0038A119 /* ViewController.swift */,
+				517EFBE11BA651FD0038A119 /* Main.storyboard */,
+				517EFBE41BA651FD0038A119 /* Assets.xcassets */,
+				517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */,
+				517EFBE91BA651FD0038A119 /* Info.plist */,
+			);
+			path = MentalFlux;
+			sourceTree = "<group>";
+		};
+		517EFBF11BA651FD0038A119 /* MentalFluxTests */ = {
+			isa = PBXGroup;
+			children = (
+				517EFBF21BA651FD0038A119 /* MentalFluxTests.swift */,
+				517EFBF41BA651FD0038A119 /* Info.plist */,
+			);
+			path = MentalFluxTests;
+			sourceTree = "<group>";
+		};
+		517EFBFC1BA651FD0038A119 /* MentalFluxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */,
+				517EFBFF1BA651FD0038A119 /* Info.plist */,
+			);
+			path = MentalFluxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		517EFBD91BA651FD0038A119 /* MentalFlux */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 517EFC021BA651FD0038A119 /* Build configuration list for PBXNativeTarget "MentalFlux" */;
+			buildPhases = (
+				517EFBD61BA651FD0038A119 /* Sources */,
+				517EFBD71BA651FD0038A119 /* Frameworks */,
+				517EFBD81BA651FD0038A119 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MentalFlux;
+			productName = MentalFlux;
+			productReference = 517EFBDA1BA651FD0038A119 /* MentalFlux.app */;
+			productType = "com.apple.product-type.application";
+		};
+		517EFBED1BA651FD0038A119 /* MentalFluxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 517EFC051BA651FD0038A119 /* Build configuration list for PBXNativeTarget "MentalFluxTests" */;
+			buildPhases = (
+				517EFBEA1BA651FD0038A119 /* Sources */,
+				517EFBEB1BA651FD0038A119 /* Frameworks */,
+				517EFBEC1BA651FD0038A119 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				517EFBF01BA651FD0038A119 /* PBXTargetDependency */,
+			);
+			name = MentalFluxTests;
+			productName = MentalFluxTests;
+			productReference = 517EFBEE1BA651FD0038A119 /* MentalFluxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		517EFBF81BA651FD0038A119 /* MentalFluxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 517EFC081BA651FD0038A119 /* Build configuration list for PBXNativeTarget "MentalFluxUITests" */;
+			buildPhases = (
+				517EFBF51BA651FD0038A119 /* Sources */,
+				517EFBF61BA651FD0038A119 /* Frameworks */,
+				517EFBF71BA651FD0038A119 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				517EFBFB1BA651FD0038A119 /* PBXTargetDependency */,
+			);
+			name = MentalFluxUITests;
+			productName = MentalFluxUITests;
+			productReference = 517EFBF91BA651FD0038A119 /* MentalFluxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		517EFBD21BA651FD0038A119 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Very Tiny Machines";
+				TargetAttributes = {
+					517EFBD91BA651FD0038A119 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					517EFBED1BA651FD0038A119 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 517EFBD91BA651FD0038A119;
+					};
+					517EFBF81BA651FD0038A119 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 517EFBD91BA651FD0038A119;
+					};
+				};
+			};
+			buildConfigurationList = 517EFBD51BA651FD0038A119 /* Build configuration list for PBXProject "MentalFlux" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 517EFBD11BA651FD0038A119;
+			productRefGroup = 517EFBDB1BA651FD0038A119 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				517EFBD91BA651FD0038A119 /* MentalFlux */,
+				517EFBED1BA651FD0038A119 /* MentalFluxTests */,
+				517EFBF81BA651FD0038A119 /* MentalFluxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		517EFBD81BA651FD0038A119 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517EFBE81BA651FD0038A119 /* LaunchScreen.storyboard in Resources */,
+				517EFBE51BA651FD0038A119 /* Assets.xcassets in Resources */,
+				517EFBE31BA651FD0038A119 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		517EFBEC1BA651FD0038A119 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		517EFBF71BA651FD0038A119 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		517EFBD61BA651FD0038A119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */,
+				517EFBDE1BA651FD0038A119 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		517EFBEA1BA651FD0038A119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517EFBF31BA651FD0038A119 /* MentalFluxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		517EFBF51BA651FD0038A119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517EFBFE1BA651FD0038A119 /* MentalFluxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		517EFBF01BA651FD0038A119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 517EFBD91BA651FD0038A119 /* MentalFlux */;
+			targetProxy = 517EFBEF1BA651FD0038A119 /* PBXContainerItemProxy */;
+		};
+		517EFBFB1BA651FD0038A119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 517EFBD91BA651FD0038A119 /* MentalFlux */;
+			targetProxy = 517EFBFA1BA651FD0038A119 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		517EFBE11BA651FD0038A119 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				517EFBE21BA651FD0038A119 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				517EFBE71BA651FD0038A119 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		517EFC001BA651FD0038A119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		517EFC011BA651FD0038A119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		517EFC031BA651FD0038A119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MentalFlux/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.verytinymachines.MentalFlux;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		517EFC041BA651FD0038A119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MentalFlux/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.verytinymachines.MentalFlux;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		517EFC061BA651FD0038A119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MentalFluxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjclark.MentalFluxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MentalFlux.app/MentalFlux";
+			};
+			name = Debug;
+		};
+		517EFC071BA651FD0038A119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MentalFluxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjclark.MentalFluxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MentalFlux.app/MentalFlux";
+			};
+			name = Release;
+		};
+		517EFC091BA651FD0038A119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MentalFluxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjclark.MentalFluxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MentalFlux;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		517EFC0A1BA651FD0038A119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MentalFluxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewjclark.MentalFluxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MentalFlux;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		517EFBD51BA651FD0038A119 /* Build configuration list for PBXProject "MentalFlux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				517EFC001BA651FD0038A119 /* Debug */,
+				517EFC011BA651FD0038A119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		517EFC021BA651FD0038A119 /* Build configuration list for PBXNativeTarget "MentalFlux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				517EFC031BA651FD0038A119 /* Debug */,
+				517EFC041BA651FD0038A119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		517EFC051BA651FD0038A119 /* Build configuration list for PBXNativeTarget "MentalFluxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				517EFC061BA651FD0038A119 /* Debug */,
+				517EFC071BA651FD0038A119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		517EFC081BA651FD0038A119 /* Build configuration list for PBXNativeTarget "MentalFluxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				517EFC091BA651FD0038A119 /* Debug */,
+				517EFC0A1BA651FD0038A119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 517EFBD21BA651FD0038A119 /* Project object */;
+}
