@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>(B) Body-Kinesthetic</key>
+	<array>
+		<string>Do you regularly participate in a sport or some physical activity?</string>
+		<string>Is it difficult to sit still for long periods of time?</string>
+		<string>Do you enjoy working with your hands in creating things?</string>
+		<string>Do you find that ideas and solutions to problems come to you while you are exercising or doing some sort of physical activity?</string>
+		<string>Do you enjoy spending your free time outdoors?</string>
+		<string>Do you speak with your hands or other body gestures?</string>
+		<string>Do you learn more about things by touching them?</string>
+		<string>Do you enjoy thrilling amusement park rides such as the roller coaster and other activities like this?</string>
+		<string>Do you think of yourself as being well-coordinated?</string>
+		<string>In order to learn a new skill, do you have to practice it to learn it, rather than read about it or see it in a video?</string>
+	</array>
+	<key>(IE) Interpersonal</key>
+	<array>
+		<string>Have people always come to you for advice?</string>
+		<string>Have you always preferred group sports to solo sports?</string>
+		<string>Do you usually prefer talking to other people about a problem, rather than figure it out on your own?</string>
+		<string>Do you have at least three close friends?</string>
+		<string>Do you prefer social activities over individual pursuits?</string>
+		<string>Do you enjoy teaching others what you can do well?</string>
+		<string>Are you considered to be a leader, either by yourself or others?</string>
+		<string>Do you feel comfortable in a crowd?</string>
+		<string>Do you prefer to spend your time with others than alone?</string>
+	</array>
+	<key>(IA) Intrapersonal</key>
+	<array>
+		<string>Do you regularly spend time alone meditating, reflecting, or thinking about important life questions?</string>
+		<string>Have you attended counseling sessions or personal growth seminars to learn more about yourself?</string>
+		<string>Do you have a hobby or interest that you keep to yourself?</string>
+		<string>Have you set goals for yourself regularly?</string>
+		<string>Do you have a realistic view of your strengths and weaknesses?</string>
+		<string>Would you prefer spending time by yourself rather than with many people around you?</string>
+		<string>Do you keep a diary or journal to record the events of your inner life?</string>
+		<string>Are you either self-employed or have you given serious consideration to starting your own business?</string>
+	</array>
+	<key>(L) Linguistic</key>
+	<array>
+		<string>Have you always enjoyed books and given them importance?</string>
+		<string>Do you hear words in your head before you speak or write them?</string>
+		<string>Do you enjoy talk shows more than television or movies?</string>
+		<string>Do you enjoy word games, puns, rhymes, tongue-twisters, and poetry?</string>
+		<string>Do you have a highly developed vocabulary and enjoy knowing words that other people do not know?</string>
+		<string>In your own education, did you enjoy subjects related to words and ideas, such as English and social studies, more than math and science?</string>
+		<string>Have you enjoyed learning to read or speak other languages?</string>
+		<string>In your speech, do you refer to information that you have read or heard about?</string>
+		<string>Have you been praised, recognized, or paid for your writing?</string>
+	</array>
+	<key>(VE - Verbal) Logical-Mathematical</key>
+	<array>
+		<string>Have you always done math in your head easily?</string>
+		<string>When you were in school, were math and/or science your best subjects?</string>
+		<string>Do you enjoy playing games that require logical thinking?</string>
+		<string>Do you set up experiments to see “what if” in your course of jobs around the house or at work?</string>
+		<string>Do you look for logical sequences and patterns, with the belief that almost everything has a logical explanation?</string>
+		<string>Do you read science periodicals or keep track of the latest scientific developments?</string>
+		<string>Do you like finding logical flaws in things that people say and do?</string>
+		<string>Do you feel the need to have things measured, categorized, analyzed, or quantified in some way?</string>
+		<string>I think in clear, abstract, wordless, imageless concepts.</string>
+	</array>
+	<key>(M) Musical</key>
+	<array>
+		<string>Do you have a pleasant singing voice?</string>
+		<string>Can you tell when a musician plays a note off-key?</string>
+		<string>Do you frequently listen to music?</string>
+		<string>Do you play a musical instrument?</string>
+		<string>Was it easy for you to learn to play a musical instrument?
+</string>
+		<string>Do you think your life would not be as rewarding without music?</string>
+		<string>Do you usually have music going through your mind?</string>
+		<string>Can you keep time to music?</string>
+		<string>Do you know the tunes to many different songs or musical selections?</string>
+		<string>Can you usually sing back a melody accurately after you hear a new selection only once or twice?</string>
+	</array>
+	<key>(N) Naturalist Intelligence</key>
+	<array>
+		<string>Do you like to spend time in nature?</string>
+		<string>Do you belong to a volunteer group related to nature?</string>
+		<string>Do you enjoy having animals around the house?</string>
+		<string>Are you involved in a hobby that involves nature, such as bird watching?</string>
+		<string>Can you easily tell the differences among species of flora and fauna?</string>
+		<string>Do you read books or magazines, or watch television shows or movies that feature nature?</string>
+		<string>On vacation, do you prefer natural settings to cultural attractions?
+</string>
+		<string>Do you enjoy visiting zoos, aquariums, or other places where the natural world is studied?</string>
+		<string>Do you enjoy working in your garden?</string>
+	</array>
+	<key>(VI) Spatial</key>
+	<array>
+		<string>Have you always been able to reproduce clear images in your mind, even when your eyes are closed or the objects are not in front of you?</string>
+		<string>Are you sensitive to color?</string>
+		<string>Do you take a lot of photographs or home movies?</string>
+		<string>Do you enjoy jigsaw and other visual puzzles?</string>
+		<string>Do you have vivid dreams?</string>
+		<string>Do you usually have an easy time getting around, even if it’s your first time in a new place?</string>
+		<string>Do you enjoy drawing or doodling?</string>
+		<string>Was geometry easier for you than algebra?</string>
+		<string>Do you have an easy time reading maps and translating their information into reality?</string>
+		<string>Do you enjoy books and magazines with many illustrations, photos, and design elements?
+</string>
+	</array>
+</dict>
+</plist>

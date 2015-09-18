@@ -14,6 +14,8 @@
 		517EFBE81BA651FD0038A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */; };
 		517EFBF31BA651FD0038A119 /* MentalFluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBF21BA651FD0038A119 /* MentalFluxTests.swift */; };
 		517EFBFE1BA651FD0038A119 /* MentalFluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */; };
+		75DF6ED61BA7B4D600FE038E /* QuestionSet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */; };
+		75DF6ED81BA7BC6000FE038E /* QuestionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		517EFBF91BA651FD0038A119 /* MentalFluxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalFluxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalFluxUITests.swift; sourceTree = "<group>"; };
 		517EFBFF1BA651FD0038A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionSet.plist; sourceTree = "<group>"; };
+		75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				517EFBE11BA651FD0038A119 /* Main.storyboard */,
 				517EFBE41BA651FD0038A119 /* Assets.xcassets */,
 				517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */,
+				75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */,
+				75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */,
 				517EFBE91BA651FD0038A119 /* Info.plist */,
 			);
 			path = MentalFlux;
@@ -231,6 +237,7 @@
 				517EFBE81BA651FD0038A119 /* LaunchScreen.storyboard in Resources */,
 				517EFBE51BA651FD0038A119 /* Assets.xcassets in Resources */,
 				517EFBE31BA651FD0038A119 /* Main.storyboard in Resources */,
+				75DF6ED61BA7B4D600FE038E /* QuestionSet.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75DF6ED81BA7BC6000FE038E /* QuestionStore.swift in Sources */,
 				517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */,
 				517EFBDE1BA651FD0038A119 /* AppDelegate.swift in Sources */,
 			);
@@ -483,6 +491,7 @@
 				517EFC041BA651FD0038A119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		517EFC051BA651FD0038A119 /* Build configuration list for PBXNativeTarget "MentalFluxTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +500,7 @@
 				517EFC071BA651FD0038A119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		517EFC081BA651FD0038A119 /* Build configuration list for PBXNativeTarget "MentalFluxUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +509,7 @@
 				517EFC0A1BA651FD0038A119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,16 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //import class
+    let questionStore = questionRandomizer()
+    
+    
+    @IBOutlet weak var label: UILabel!
+    
+    @IBAction func questionButton(sender: AnyObject) {
+        label.text = questionStore.randomize() as! String
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        label.text = questionStore.randomize() as! String
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        //questionStore = dict!.objectForKey("(B) Body-Kinesthetic") as! [String]
+        
     }
+    
+
+
 
 
 }
