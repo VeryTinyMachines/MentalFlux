@@ -14,6 +14,8 @@
 		517EFBE81BA651FD0038A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */; };
 		517EFBF31BA651FD0038A119 /* MentalFluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBF21BA651FD0038A119 /* MentalFluxTests.swift */; };
 		517EFBFE1BA651FD0038A119 /* MentalFluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */; };
+		752409FB1BAC9ED40002BB8D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752409FA1BAC9ED40002BB8D /* UserProfile.swift */; };
+		75D3A9D21BAF347A000E5F3C /* UserProfile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75D3A9D11BAF347A000E5F3C /* UserProfile.plist */; };
 		75DF6ED61BA7B4D600FE038E /* QuestionSet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */; };
 		75DF6ED81BA7BC6000FE038E /* QuestionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		517EFBF91BA651FD0038A119 /* MentalFluxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalFluxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalFluxUITests.swift; sourceTree = "<group>"; };
 		517EFBFF1BA651FD0038A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		752409FA1BAC9ED40002BB8D /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = ../UserProfile.swift; sourceTree = "<group>"; };
+		75D3A9D11BAF347A000E5F3C /* UserProfile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserProfile.plist; sourceTree = "<group>"; };
 		75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionSet.plist; sourceTree = "<group>"; };
 		75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,8 +110,8 @@
 				517EFBE11BA651FD0038A119 /* Main.storyboard */,
 				517EFBE41BA651FD0038A119 /* Assets.xcassets */,
 				517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */,
-				75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */,
-				75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */,
+				75D3A9D51BAF366D000E5F3C /* CLASSES */,
+				75D3A9D41BAF365F000E5F3C /* PLISTS */,
 				517EFBE91BA651FD0038A119 /* Info.plist */,
 			);
 			path = MentalFlux;
@@ -129,6 +133,24 @@
 				517EFBFF1BA651FD0038A119 /* Info.plist */,
 			);
 			path = MentalFluxUITests;
+			sourceTree = "<group>";
+		};
+		75D3A9D41BAF365F000E5F3C /* PLISTS */ = {
+			isa = PBXGroup;
+			children = (
+				75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */,
+				75D3A9D11BAF347A000E5F3C /* UserProfile.plist */,
+			);
+			name = PLISTS;
+			sourceTree = "<group>";
+		};
+		75D3A9D51BAF366D000E5F3C /* CLASSES */ = {
+			isa = PBXGroup;
+			children = (
+				75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */,
+				752409FA1BAC9ED40002BB8D /* UserProfile.swift */,
+			);
+			name = CLASSES;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +258,7 @@
 			files = (
 				517EFBE81BA651FD0038A119 /* LaunchScreen.storyboard in Resources */,
 				517EFBE51BA651FD0038A119 /* Assets.xcassets in Resources */,
+				75D3A9D21BAF347A000E5F3C /* UserProfile.plist in Resources */,
 				517EFBE31BA651FD0038A119 /* Main.storyboard in Resources */,
 				75DF6ED61BA7B4D600FE038E /* QuestionSet.plist in Resources */,
 			);
@@ -262,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752409FB1BAC9ED40002BB8D /* UserProfile.swift in Sources */,
 				75DF6ED81BA7BC6000FE038E /* QuestionStore.swift in Sources */,
 				517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */,
 				517EFBDE1BA651FD0038A119 /* AppDelegate.swift in Sources */,

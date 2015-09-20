@@ -10,37 +10,57 @@ import Foundation
 
 class questionRandomizer {
     
-    func randomize() -> (AnyObject, AnyObject)
+    //Variables
+    var questionDict: Dictionary<String, Array<String>>
+    
+    init() {
+        questionDict = ["": ["", "", ""]]
+
+    }
+    
+    //
+    let path = NSBundle.mainBundle().pathForResource("QuestionSet", ofType: "plist")
+    
+    //Load Data
+    func loadPlist() -> (AnyObject)
     {
-        //dictionary variable
-        var questionDictionary: NSDictionary?
-        
-        var question: AnyObject?
-        var randomValue: AnyObject?
-        var randomKey: AnyObject?
-        
-        if let path = NSBundle.mainBundle().pathForResource("QuestionSet", ofType: "plist")
-            
+        if let dict = NSDictionary(contentsOfFile: path!) as? Dictionary<String, Array<String>>
         {
-            questionDictionary = NSDictionary(contentsOfFile: path)
-            
+            for (key, value) in dict {
+                    //print("key: \(key)", appendNewline: true)
+                
+                        questionDict[key] = [key]
+                
+                    for string in value
+                    {
+                        //print("value.string: \(string)", appendNewline: true)
+                        
+                        questionDict[string] = value
+                }
+            }
         }
         
-        //questionDictionary is now holding the plist
+        return questionDict
+    }
+    
+    
+    func randomize(key:String) -> (String)
+     {
+        var array = questionDict[key]
+        let randomIndex = Int(arc4random_uniform(UInt32(array!ty.count)))
         
-        if case let dictionary as Dictionary<String, String> = questionDictionary
-        {
-            
-            let index: Int = Int(arc4random_uniform(UInt32(dictionary.count)))
-            let value = Array(dictionary.values)[index]
-            let key = Array(dictionary.keys)[index]
-            //let value = dictionary[key]
-            randomKey = key
-            randomValue = value
-        }
+        return array[randomIndex]
+    }
+
+    
+    //input sting containing question type and it will return questions of said type
+    func questionType(key:String) -> (Array<String>)!
+    {
+        //sort dictionary for keys
         
-        return (randomKey!, randomValue!)
-        
+        //question type = key
+        //returns string of question type
+        return questionDict[key]
     }
     
 }

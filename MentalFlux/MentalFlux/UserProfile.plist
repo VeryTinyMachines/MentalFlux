@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>(B) Bodily-kinesthetic</key>
+	<integer>0</integer>
+	<key>(IE) Interpersonal</key>
+	<integer>0</integer>
+	<key>(IA)Intrapersonal</key>
+	<integer>0</integer>
+	<key>(L) Linguistic</key>
+	<integer>0</integer>
+	<key>(VE - Verbal) Logical-Mathematical</key>
+	<integer>0</integer>
+	<key>(M) Musical</key>
+	<integer>0</integer>
+	<key>(N) Naturalist Intelligence</key>
+	<integer>0</integer>
+	<key>(VI) Spatial</key>
+	<integer>0</integer>
+</dict>
+</plist>
