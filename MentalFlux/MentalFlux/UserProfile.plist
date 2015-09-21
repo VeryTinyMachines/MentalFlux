@@ -2,21 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>(B) Bodily-kinesthetic</key>
+	<key>B</key>
 	<integer>0</integer>
-	<key>(IE) Interpersonal</key>
+	<key>IE</key>
 	<integer>0</integer>
-	<key>(IA)Intrapersonal</key>
+	<key>IA</key>
 	<integer>0</integer>
-	<key>(L) Linguistic</key>
+	<key>L</key>
 	<integer>0</integer>
-	<key>(VE - Verbal) Logical-Mathematical</key>
+	<key>VE</key>
 	<integer>0</integer>
-	<key>(M) Musical</key>
+	<key>M</key>
 	<integer>0</integer>
-	<key>(N) Naturalist Intelligence</key>
+	<key>N</key>
 	<integer>0</integer>
-	<key>(VI) Spatial</key>
+	<key>VI</key>
 	<integer>0</integer>
 </dict>
 </plist>

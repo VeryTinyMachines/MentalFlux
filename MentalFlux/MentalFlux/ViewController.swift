@@ -15,10 +15,6 @@ class ViewController: UIViewController {
     var questionValue = 0
     var questionID = ""
     
-    //import classes
-    let questionStore = questionRandomizer()
-    let profile = UserProfile()
-
     //Storyboard Elements
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var outputLabel: UILabel!
@@ -32,10 +28,10 @@ class ViewController: UIViewController {
         //test to see if questionvalue holds the correct data (it does)
         outputLabel.text = String(questionValue)
         //
-        profile.calculateResults(questionValue, question: questionID)
+//        profile.calculateResults(questionValue, question: questionID)
         
         //store data
-        profile.storeData(questionID, value: questionValue)
+//        profile.storeData(questionID, value: questionValue)
         
     }
     
@@ -50,6 +46,32 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        for key in ["B", "VI", "IE", "L", "VE", "M", "N", "IA"] {
+//            
+//            for _ in 1...10 {
+//                if let question = QuestionStore.sharedInstance.randomQuestionForKey(key) {
+//                    
+//                    print("Key: \(key) Question: \(question)", appendNewline: true)
+//                    
+//                } else {
+//                    print("Question not returned", appendNewline: true)
+//                }
+//            }
+//        }
+        
+        
+        
+        UserProfile.sharedProfile.updateScoreForKey("B", deltaValue: 4)
+        
+        let score = UserProfile.sharedProfile.currentScoreForKey("B")
+        
+        print(score, appendNewline: true)
+        
+        
+        
+        
+        
         
         //questionStore = dict!.objectForKey("(B) Body-Kinesthetic") as! [String]
         //questionStore.loadPlist()

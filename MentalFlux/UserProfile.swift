@@ -6,62 +6,61 @@
 //  Copyright © 2015 Very Tiny Machines. All rights reserved.
 //
 
-import Foundation
+// This class is a singleton that stores the current score per question type for a single user with the ability to increment those values.
 
+import Foundation
 
 class UserProfile {
     
-    
-    //Variables
-        //create dictionary
     var userDictionary = [String: Int]()
-    var tally: Int
-    var result: Int
-    var questionType:String
-    let questionKey = ""
-    var questionID: AnyObject = 101
-
     
-    init() {
-        tally = 0
-        userDictionary = ["":tally]
-        result = 0
-        questionType = ""
-    }
+    static let sharedProfile = UserProfile()
+    private init() {
+        load()
+    } //This prevents others from using the default '()' initializer for this class.
     
-    func calculateResults(results: Int, question:String) ->Int
-    {
-        let results = result
-        let question = questionType
-        tally += results
-        userDictionary[question] = tally
-        return userDictionary[question]!
+    
+    func currentScoreForKey(key: String) -> Int? {
+        
+        if let score = userDictionary[key] {
+            return score
+        }
+        
+        return nil
     }
     
     
-
-    func storeData(question:String, value:Int)
-    {
-            questionType = question
-            userDictionary[question] = value
+    func updateScoreForKey(key:String, deltaValue: Int) {
         
-            let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
-            let documentsDirectory = paths.objectAtIndex(0) as! NSString
-            let path = documentsDirectory.stringByAppendingPathComponent("UserProfile.plist")
-            
-            var dict: NSMutableDictionary = ["Key": "ID"]
-            //saving values
-            dict.setObject(questionID, forKey: questionKey)
-            //...
-            
-            //writing plist
-            dict.writeToFile(path, atomically: false)
-            
-            let resultDictionary = NSMutableDictionary(contentsOfFile: path)
-            //check to see if it is working correctly
-            print("plist contains \(resultDictionary?.description)")
+        if let score = userDictionary[key] {
+            let newScore = score + deltaValue
+            userDictionary[key] = newScore
+        } else {
+            // No current score for that key
+            // Start a new one
+            userDictionary[key] = deltaValue
+        }
         
-        
+        save()
+    }
+    
+    
+    func currentScores() -> [String: Int] {
+        return userDictionary
+    }
+    
+    
+    func save() {
+        // Save userDictionary somewhere
+        NSUserDefaults.standardUserDefaults().setObject(userDictionary, forKey: "UserDictionary")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    
+    func load() {
+        if let loadedDict = NSUserDefaults.standardUserDefaults().objectForKey("UserDictionary") as? [String: Int] {
+            userDictionary = loadedDict
+        }
     }
     
 
