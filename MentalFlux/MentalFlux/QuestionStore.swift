@@ -34,7 +34,7 @@ class QuestionStore {
                 }
             }
         } else {
-            print("Error: Question Set Plist Path not found", appendNewline: true)
+            print("Error: Question Set Plist Path not found", terminator: "\n")
         }
     }
     
@@ -56,11 +56,19 @@ class QuestionStore {
     //input sting containing question type and it will return questions of said type
     func questionSetForKey(key:String) -> Array<String>?
     {
-        //sort dictionary for keys
-        
-        //question type = key
-        //returns string of question type
         return questionDict[key]
     }
     
+    func returnRandomKey() -> String?
+    {
+        
+        let array = ["B", "IE", "IA", "L", "VE", "M", "N", "VI"]
+        let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
+        
+        if randomIndex <= array.count
+        {
+        return array[randomIndex]
+        }
+        return nil;
+    }
 }

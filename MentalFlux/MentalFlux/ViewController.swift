@@ -9,35 +9,62 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    //Variables
+
     var currentValue = 0
-    var questionValue = 0
-    var questionID = ""
     
-    //Storyboard Elements
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var sliderLabel: UILabel!
+    @IBOutlet weak var agreementLabel: UILabel!
     
-    //Send data to plist: UserProfile
-    @IBAction func questionButton(sender: AnyObject) {
+
+    
+    @IBAction func getNextQuestion(sender: AnyObject) {
         
-        //set questionValue to the value of the slider
-        questionValue = currentValue
+        let key = QuestionStore.sharedStore.returnRandomKey()
         
-        //test to see if questionvalue holds the correct data (it does)
-        outputLabel.text = String(questionValue)
-        //
-//        profile.calculateResults(questionValue, question: questionID)
+        self.questionLabel.fadeOut(completion: {
+            (finished: Bool) -> Void in
+            self.questionLabel.text = QuestionStore.sharedStore.randomQuestionForKey(key!)
+            self.questionLabel.fadeIn()
+        })
+        //store the value
+        UserProfile.sharedProfile.updateScoreForKey(key!, deltaValue: currentValue)
         
-        //store data
-//        profile.storeData(questionID, value: questionValue)
+        /*
+        //return random question
+        questionLabel.text = QuestionStore.sharedStore.randomQuestionForKey(key)
         
+        //store the value
+        UserProfile.sharedProfile.updateScoreForKey(key, deltaValue: currentValue)
+        */
     }
     
     @IBAction func sliderChange(sender: UISlider) {
+    
+        //Switch Statement
+            //case0 sliderLabel.text = "Strongly Disagree"
+            //case1 sliderLabel.text = "Disagree"
+            //case2 sliderLabel.text = "Neither"
+            //case3 sliderLabel.text = "Agree"
+            //case4 sliderLabel.text = "Strongly Agree"
+        
 
-        label.text = "\(currentValue)"
+        switch currentValue
+        {
+        case 0:
+            sliderLabel.text = "Strongly Disagree"
+        case 1:
+            sliderLabel.text = "Disagree"
+        case 2:
+            sliderLabel.text = "Neither"
+        case 3:
+            sliderLabel.text = "Agree"
+        case 4:
+            sliderLabel.text = "Strongly Agree"
+        default:
+            sliderLabel.text = "Neither"
+        }
+        //sliderLabel.text = "\(currentValue)"
         //pass value to questionvalue
         currentValue = Int(sender.value)
         
@@ -46,36 +73,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        for key in ["B", "VI", "IE", "L", "VE", "M", "N", "IA"] {
-//            
-//            for _ in 1...10 {
-//                if let question = QuestionStore.sharedInstance.randomQuestionForKey(key) {
-//                    
-//                    print("Key: \(key) Question: \(question)", appendNewline: true)
-//                    
-//                } else {
-//                    print("Question not returned", appendNewline: true)
-//                }
-//            }
-//        }
-        
-        
-        
+
+        /*
         UserProfile.sharedProfile.updateScoreForKey("B", deltaValue: 4)
         
         let score = UserProfile.sharedProfile.currentScoreForKey("B")
         
         print(score, appendNewline: true)
+        */
+        let key = QuestionStore.sharedStore.returnRandomKey()
         
+        self.questionLabel.alpha = 0
         
+        //return random question
+        questionLabel.text = QuestionStore.sharedStore.randomQuestionForKey(key!)
         
-        
-        
-        
-        //questionStore = dict!.objectForKey("(B) Body-Kinesthetic") as! [String]
-        //questionStore.loadPlist()
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animateWithDuration(1.2, animations: { () -> Void in
+        self.questionLabel.alpha = 2
+        })
     }
     
 
