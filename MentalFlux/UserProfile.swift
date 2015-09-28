@@ -40,7 +40,6 @@ class UserProfile {
             // Start a new one
             userDictionary[key] = deltaValue
         }
-        
         save()
     }
     

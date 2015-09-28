@@ -62,12 +62,12 @@ class QuestionStore {
     func returnRandomKey() -> String?
     {
         
-        let array = ["B", "IE", "IA", "L", "VE", "M", "N", "VI"]
+        let array = [String](questionDict.keys)
         let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
         
         if randomIndex <= array.count
         {
-        return array[randomIndex]
+            return array[randomIndex]
         }
         return nil;
     }

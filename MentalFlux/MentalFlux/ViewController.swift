@@ -11,44 +11,48 @@ import UIKit
 class ViewController: UIViewController {
 
     var currentValue = 0
+    var currentQuestionKey: String?
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var sliderLabel: UILabel!
     @IBOutlet weak var agreementLabel: UILabel!
-    
-
+    @IBOutlet weak var slider: UISlider!
     
     @IBAction func getNextQuestion(sender: AnyObject) {
         
-        let key = QuestionStore.sharedStore.returnRandomKey()
+        // Save
+        if let currentKey = currentQuestionKey {
+            UserProfile.sharedProfile.updateScoreForKey(currentKey, deltaValue: currentValue)
+        }
         
-        self.questionLabel.fadeOut(completion: {
-            (finished: Bool) -> Void in
-            self.questionLabel.text = QuestionStore.sharedStore.randomQuestionForKey(key!)
-            self.questionLabel.fadeIn()
-        })
-        //store the value
-        UserProfile.sharedProfile.updateScoreForKey(key!, deltaValue: currentValue)
+        // Get a new key/question
+        currentQuestionKey = QuestionStore.sharedStore.returnRandomKey()
         
-        /*
-        //return random question
-        questionLabel.text = QuestionStore.sharedStore.randomQuestionForKey(key)
-        
-        //store the value
-        UserProfile.sharedProfile.updateScoreForKey(key, deltaValue: currentValue)
-        */
+        if let currentKey = currentQuestionKey {
+            // We have a valid key
+            if let nextQuestionString = QuestionStore.sharedStore.randomQuestionForKey(currentKey) {
+                // We have a valid question
+                self.questionLabel.fadeOut(completion: {
+                    (finished: Bool) -> Void in
+                    self.questionLabel.text = nextQuestionString
+                    self.questionLabel.fadeIn()
+                })
+            } else {
+                // We do not have a valid question
+                self.questionLabel.fadeOut(completion: {
+                    (finished: Bool) -> Void in
+                    self.questionLabel.text = "Question not found"
+                    self.questionLabel.fadeIn()
+                })
+            }
+        }
     }
     
     @IBAction func sliderChange(sender: UISlider) {
     
-        //Switch Statement
-            //case0 sliderLabel.text = "Strongly Disagree"
-            //case1 sliderLabel.text = "Disagree"
-            //case2 sliderLabel.text = "Neither"
-            //case3 sliderLabel.text = "Agree"
-            //case4 sliderLabel.text = "Strongly Agree"
+        //pass value to questionvalue
+        currentValue = Int(roundf(sender.value))
         
-
         switch currentValue
         {
         case 0:
@@ -64,42 +68,30 @@ class ViewController: UIViewController {
         default:
             sliderLabel.text = "Neither"
         }
-        //sliderLabel.text = "\(currentValue)"
-        //pass value to questionvalue
-        currentValue = Int(sender.value)
         
+        if let theSlider = slider {
+            theSlider.value = Float(currentValue)
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        /*
-        UserProfile.sharedProfile.updateScoreForKey("B", deltaValue: 4)
+        currentQuestionKey = QuestionStore.sharedStore.returnRandomKey()
         
-        let score = UserProfile.sharedProfile.currentScoreForKey("B")
-        
-        print(score, appendNewline: true)
-        */
-        let key = QuestionStore.sharedStore.returnRandomKey()
-        
-        self.questionLabel.alpha = 0
+        questionLabel.alpha = 0
         
         //return random question
-        questionLabel.text = QuestionStore.sharedStore.randomQuestionForKey(key!)
-        
+        if let currentKey = currentQuestionKey {
+            questionLabel.text = QuestionStore.sharedStore.randomQuestionForKey(currentKey)
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        UIView.animateWithDuration(1.2, animations: { () -> Void in
-        self.questionLabel.alpha = 2
-        })
+        
+        questionLabel.fadeIn()
     }
-    
-
-
-
-
 }
 
