@@ -14,6 +14,7 @@
 		517EFBE81BA651FD0038A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */; };
 		517EFBF31BA651FD0038A119 /* MentalFluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBF21BA651FD0038A119 /* MentalFluxTests.swift */; };
 		517EFBFE1BA651FD0038A119 /* MentalFluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */; };
+		519964AA1BBDF45400386C4A /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519964A91BBDF45400386C4A /* GraphViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		752409FB1BAC9ED40002BB8D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752409FA1BAC9ED40002BB8D /* UserProfile.swift */; };
 		75AE3B851BB23B5E00F2471B /* Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE3B841BB23B5E00F2471B /* Fade.swift */; };
 		75DF6ED61BA7B4D600FE038E /* QuestionSet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */; };
@@ -51,6 +52,7 @@
 		517EFBF91BA651FD0038A119 /* MentalFluxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentalFluxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalFluxUITests.swift; sourceTree = "<group>"; };
 		517EFBFF1BA651FD0038A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		519964A91BBDF45400386C4A /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		752409FA1BAC9ED40002BB8D /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = ../UserProfile.swift; sourceTree = "<group>"; };
 		75AE3B841BB23B5E00F2471B /* Fade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fade.swift; path = ../Fade.swift; sourceTree = "<group>"; };
 		75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionSet.plist; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				517EFBDD1BA651FD0038A119 /* AppDelegate.swift */,
 				517EFBDF1BA651FD0038A119 /* ViewController.swift */,
+				519964A91BBDF45400386C4A /* GraphViewController.swift */,
 				517EFBE11BA651FD0038A119 /* Main.storyboard */,
 				517EFBE41BA651FD0038A119 /* Assets.xcassets */,
 				517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */,
@@ -282,6 +285,7 @@
 				752409FB1BAC9ED40002BB8D /* UserProfile.swift in Sources */,
 				75DF6ED81BA7BC6000FE038E /* QuestionStore.swift in Sources */,
 				75AE3B851BB23B5E00F2471B /* Fade.swift in Sources */,
+				519964AA1BBDF45400386C4A /* GraphViewController.swift in Sources */,
 				517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */,
 				517EFBDE1BA651FD0038A119 /* AppDelegate.swift in Sources */,
 			);
