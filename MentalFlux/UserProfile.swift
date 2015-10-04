@@ -45,7 +45,26 @@ class UserProfile {
     
     
     func currentScores() -> [String: Int] {
-        return userDictionary
+        
+        var scoreDictionary = [String: Int]()
+        scoreDictionary = ["B":0, "IE":0, "IA":0, "L":0, "VE":0, "M":0, "N":0, "VI":0] 
+        
+        //add values to new dictionary
+        for (key, score) in userDictionary {
+            
+            for (key, value) in scoreDictionary{
+            
+                scoreDictionary[key] = userDictionary[key]
+            }
+        }
+        
+        //if a key has no value, make it 0
+        //if scoreDictionary[key] == nil {
+        //
+        //}
+        
+        
+        return scoreDictionary
     }
     
     

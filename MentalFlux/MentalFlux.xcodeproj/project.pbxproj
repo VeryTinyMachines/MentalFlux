@@ -14,8 +14,10 @@
 		517EFBE81BA651FD0038A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */; };
 		517EFBF31BA651FD0038A119 /* MentalFluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBF21BA651FD0038A119 /* MentalFluxTests.swift */; };
 		517EFBFE1BA651FD0038A119 /* MentalFluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */; };
-		519964AA1BBDF45400386C4A /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519964A91BBDF45400386C4A /* GraphViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		519964AA1BBDF45400386C4A /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519964A91BBDF45400386C4A /* GraphViewController.swift */; };
+		750446151BC0AF9A00A5B16E /* BufferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750446141BC0AF9A00A5B16E /* BufferViewController.swift */; };
 		752409FB1BAC9ED40002BB8D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752409FA1BAC9ED40002BB8D /* UserProfile.swift */; };
+		75A357331BBF47C1007D1B09 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A357321BBF47C1007D1B09 /* BackgroundViewController.swift */; };
 		75AE3B851BB23B5E00F2471B /* Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE3B841BB23B5E00F2471B /* Fade.swift */; };
 		75DF6ED61BA7B4D600FE038E /* QuestionSet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */; };
 		75DF6ED81BA7BC6000FE038E /* QuestionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */; };
@@ -53,7 +55,9 @@
 		517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalFluxUITests.swift; sourceTree = "<group>"; };
 		517EFBFF1BA651FD0038A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		519964A91BBDF45400386C4A /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		750446141BC0AF9A00A5B16E /* BufferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferViewController.swift; sourceTree = "<group>"; };
 		752409FA1BAC9ED40002BB8D /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = ../UserProfile.swift; sourceTree = "<group>"; };
+		75A357321BBF47C1007D1B09 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundViewController.swift; path = ../BackgroundViewController.swift; sourceTree = "<group>"; };
 		75AE3B841BB23B5E00F2471B /* Fade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fade.swift; path = ../Fade.swift; sourceTree = "<group>"; };
 		75DF6ED51BA7B4D600FE038E /* QuestionSet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionSet.plist; sourceTree = "<group>"; };
 		75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStore.swift; sourceTree = "<group>"; };
@@ -109,7 +113,7 @@
 			children = (
 				517EFBDD1BA651FD0038A119 /* AppDelegate.swift */,
 				517EFBDF1BA651FD0038A119 /* ViewController.swift */,
-				519964A91BBDF45400386C4A /* GraphViewController.swift */,
+				750446161BC0AFE900A5B16E /* VC */,
 				517EFBE11BA651FD0038A119 /* Main.storyboard */,
 				517EFBE41BA651FD0038A119 /* Assets.xcassets */,
 				517EFBE61BA651FD0038A119 /* LaunchScreen.storyboard */,
@@ -136,6 +140,16 @@
 				517EFBFF1BA651FD0038A119 /* Info.plist */,
 			);
 			path = MentalFluxUITests;
+			sourceTree = "<group>";
+		};
+		750446161BC0AFE900A5B16E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				750446141BC0AF9A00A5B16E /* BufferViewController.swift */,
+				75A357321BBF47C1007D1B09 /* BackgroundViewController.swift */,
+				519964A91BBDF45400386C4A /* GraphViewController.swift */,
+			);
+			name = VC;
 			sourceTree = "<group>";
 		};
 		75D3A9D51BAF366D000E5F3C /* CLASSES */ = {
@@ -286,7 +300,9 @@
 				75DF6ED81BA7BC6000FE038E /* QuestionStore.swift in Sources */,
 				75AE3B851BB23B5E00F2471B /* Fade.swift in Sources */,
 				519964AA1BBDF45400386C4A /* GraphViewController.swift in Sources */,
+				75A357331BBF47C1007D1B09 /* BackgroundViewController.swift in Sources */,
 				517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */,
+				750446151BC0AF9A00A5B16E /* BufferViewController.swift in Sources */,
 				517EFBDE1BA651FD0038A119 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
