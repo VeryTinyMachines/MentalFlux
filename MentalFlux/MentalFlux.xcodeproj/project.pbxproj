@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51612B5C1BC1EDE8008D8663 /* ScoreCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51612B5B1BC1EDE8008D8663 /* ScoreCoordinate.swift */; settings = {ASSET_TAGS = (); }; };
 		517EFBDE1BA651FD0038A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBDD1BA651FD0038A119 /* AppDelegate.swift */; };
 		517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBDF1BA651FD0038A119 /* ViewController.swift */; };
 		517EFBE31BA651FD0038A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517EFBE11BA651FD0038A119 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51612B5B1BC1EDE8008D8663 /* ScoreCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCoordinate.swift; sourceTree = "<group>"; };
 		517EFBDA1BA651FD0038A119 /* MentalFlux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentalFlux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517EFBDD1BA651FD0038A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		517EFBDF1BA651FD0038A119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				75DF6ED71BA7BC6000FE038E /* QuestionStore.swift */,
+				51612B5B1BC1EDE8008D8663 /* ScoreCoordinate.swift */,
 				752409FA1BAC9ED40002BB8D /* UserProfile.swift */,
 				75AE3B841BB23B5E00F2471B /* Fade.swift */,
 			);
@@ -300,6 +303,7 @@
 				75DF6ED81BA7BC6000FE038E /* QuestionStore.swift in Sources */,
 				75AE3B851BB23B5E00F2471B /* Fade.swift in Sources */,
 				519964AA1BBDF45400386C4A /* GraphViewController.swift in Sources */,
+				51612B5C1BC1EDE8008D8663 /* ScoreCoordinate.swift in Sources */,
 				75A357331BBF47C1007D1B09 /* BackgroundViewController.swift in Sources */,
 				517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */,
 				750446151BC0AF9A00A5B16E /* BufferViewController.swift in Sources */,
