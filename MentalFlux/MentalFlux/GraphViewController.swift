@@ -13,26 +13,19 @@ import CoreText
 
 class GraphViewController: UIViewController {
     
+    @IBOutlet weak var qLabel: UILabel!
+    
+    @IBAction func resetButton(sender: AnyObject) {
+        UserProfile.sharedProfile.reset()
+    }
+
     var chartView:UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //2 creates new view with center point(X,Y) width and height
-        let backView = UIView(frame: CGRect(x: 2, y: 50, width: CGRectGetWidth(self.view.frame), height: CGRectGetWidth(self.view.frame)))
-        
-        
-        
-        // Buffer Zone
-        //2 creates new view with center point(X,Y) width and height
-        let bufferView = UIView(frame: CGRect(x: 2, y: 50, width: CGRectGetWidth(self.view.frame), height: CGRectGetWidth(self.view.frame)))
-        
-        
-        self.view.addSubview(bufferView)
+        // Do any additional setup after loading the view, typically from a nib
         
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -41,11 +34,11 @@ class GraphViewController: UIViewController {
     
     //get scores out of Userprofile
     override func viewWillAppear(animated: Bool) {
-        print("viewWillAppear")
+        //print("viewWillAppear")
         
         let currentScores = UserProfile.sharedProfile.currentScores()
         
-        print(currentScores)
+        //print(currentScores)
         
         var highestScore = 0
         
@@ -56,9 +49,9 @@ class GraphViewController: UIViewController {
             }
         }
         
-        print(highestScore)
+        //print(highestScore)
         
-        print("2")
+        //print("2")
         
         //1 clear the view
         if let viewToRemove = chartView {
@@ -66,7 +59,7 @@ class GraphViewController: UIViewController {
         }
         
         //2 creates new view with center point(X,Y) width and height
-        let newView = UIView(frame: CGRect(x: 2, y: 50, width: CGRectGetWidth(self.view.frame), height: CGRectGetWidth(self.view.frame)))
+        let newView = UIView(frame: CGRect(x: 2, y: 0, width: CGRectGetWidth(self.view.frame), height: CGRectGetWidth(self.view.frame)))
         
         // 3 creates radius based on New View and HighScore
         
@@ -83,6 +76,8 @@ class GraphViewController: UIViewController {
         
         print("3")
         
+        
+        ///////Edit here
         // Background octagon.
         let backPolyLayer = drawBackgroundLayer(x: x, y: y,radius: radius * CGFloat(highestScore + 1), sides: 8, color: UIColor.grayColor().colorWithAlphaComponent(0.5))
         //5
@@ -115,24 +110,21 @@ class GraphViewController: UIViewController {
             keyLabel.text = key
             keyLabel.textAlignment = NSTextAlignment.Center
             keyLabel.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.25)
+            //tap goes here
+            //let tap = UITapGestureRecognizer(target: self, action: "setLabel()")
 
             newView.addSubview(keyLabel)
             
             
             // Draw spoke
             let spokePoint = pointForScore(0, origin: scoreCo.originPoint, angle: scoreCo.angle, radius: radius)
-            
-            
-            
-            
+
             let path = CGPathCreateMutable()
             
             
             CGPathMoveToPoint(path, nil, spokePoint.x, spokePoint.y)
             CGPathAddLineToPoint(path, nil, scorePoint.x, scorePoint.y)
             CGPathCloseSubpath(path)
-            
-            
 
             let shape = CAShapeLayer()
             shape.path = path
@@ -141,8 +133,6 @@ class GraphViewController: UIViewController {
             shape.lineWidth = 2.0
             
             newView.layer.addSublayer(shape)
-            
-            
             
         }
         
@@ -153,20 +143,14 @@ class GraphViewController: UIViewController {
         let polyPath = polygonPathFromPoints(pointArray)
         
         
-        
         let polyLayer = CAShapeLayer()
         polyLayer.path = polyPath
         polyLayer.strokeColor = UIColor.greenColor().CGColor
         polyLayer.fillColor = UIColor.clearColor().CGColor
         polyLayer.lineWidth = 5.0
         
-        
-        
         print("6")
-        
-        //4
-//        let polyLayer = drawPolygonLayer(x,y: y,radius: radius, scores: scoreArray, color: UIColor.redColor())
-        //5
+
         newView.layer.addSublayer(polyLayer)
         self.view.addSubview(newView)
         
@@ -174,14 +158,11 @@ class GraphViewController: UIViewController {
         
     }    
 }
-
 // 6 convert
 func degree2radian(a:CGFloat)->CGFloat {
     let b = CGFloat(M_PI) * a/180
     return b
 }
-
-
 
 // 8 creates the path to be followed
 func polygonPathFromPoints(points:Array<CGPoint>) -> CGPathRef {
@@ -210,7 +191,6 @@ func polygonPointKeyDictionaryForScores(scores: Dictionary<String, Int>,x:CGFloa
     let cy = y // y origin
     let r  = radius // radius of circle
     var i = 0
-//    var points = [CGPoint]()
     
     var pointKeyDictionary = Dictionary<String, ScoreCoordinate>()
     
@@ -221,12 +201,6 @@ func polygonPointKeyDictionaryForScores(scores: Dictionary<String, Int>,x:CGFloa
         scoreCo.originPoint = CGPoint(x: x, y: y)
         scoreCo.score = score
         scoreCo.angle = angle * CGFloat(i)
-        
-//        let xpo = cx + (r * floatScore) * cos(angle * CGFloat(i))
-//        let ypo = cy + (r * floatScore) * sin(angle * CGFloat(i))
-        //marks center point
-        
-//        let point = CGPoint(x: xpo, y: ypo)
         
         pointKeyDictionary[key] = scoreCo
         
@@ -305,4 +279,23 @@ func drawPolygonLayer(x:CGFloat, y:CGFloat, radius:CGFloat, scores:Array<Int>, c
     
     return shape
 }
+
+//Buffer zone layer creation
+func drawBufferLayer(x x:CGFloat, y:CGFloat, radius:CGFloat, sides:Int, color:UIColor) -> CAShapeLayer {
+    
+    var shape = CAShapeLayer()
+    shape.path = polygonPath(x: x, y: y, radius: radius, sides: sides)
+    shape.strokeColor = color.CGColor
+    shape.fillColor = UIColor.clearColor().CGColor
+    shape.lineWidth = 3.0
+    return shape
+}
+
+func setLabel()
+{
+    
+    
+}
+
+
 

@@ -79,5 +79,11 @@ class UserProfile {
         }
     }
     
-
+    func reset()
+    {
+        
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "UserDictionary")
+        
+    }
+    
 }

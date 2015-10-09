@@ -10,7 +10,6 @@ import UIKit
 import CoreText
 
 
-
 class BackgroundViewController: UIViewController {
     
     override func viewDidLoad() {

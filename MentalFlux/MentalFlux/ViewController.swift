@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         }
     }
     
+    
     @IBAction func sliderChange(sender: UISlider) {
     
         //pass value to questionvalue
@@ -72,6 +73,14 @@ class ViewController: UIViewController {
         if let theSlider = slider {
             theSlider.value = Float(currentValue)
         }
+    }
+    
+    func labelChanger()
+    {
+        
+        
+
+        
     }
     
     

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51612B5C1BC1EDE8008D8663 /* ScoreCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51612B5B1BC1EDE8008D8663 /* ScoreCoordinate.swift */; settings = {ASSET_TAGS = (); }; };
+		51612B5C1BC1EDE8008D8663 /* ScoreCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51612B5B1BC1EDE8008D8663 /* ScoreCoordinate.swift */; };
 		517EFBDE1BA651FD0038A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBDD1BA651FD0038A119 /* AppDelegate.swift */; };
 		517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBDF1BA651FD0038A119 /* ViewController.swift */; };
 		517EFBE31BA651FD0038A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517EFBE11BA651FD0038A119 /* Main.storyboard */; };
@@ -16,7 +16,6 @@
 		517EFBF31BA651FD0038A119 /* MentalFluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBF21BA651FD0038A119 /* MentalFluxTests.swift */; };
 		517EFBFE1BA651FD0038A119 /* MentalFluxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */; };
 		519964AA1BBDF45400386C4A /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519964A91BBDF45400386C4A /* GraphViewController.swift */; };
-		750446151BC0AF9A00A5B16E /* BufferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750446141BC0AF9A00A5B16E /* BufferViewController.swift */; };
 		752409FB1BAC9ED40002BB8D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752409FA1BAC9ED40002BB8D /* UserProfile.swift */; };
 		75A357331BBF47C1007D1B09 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A357321BBF47C1007D1B09 /* BackgroundViewController.swift */; };
 		75AE3B851BB23B5E00F2471B /* Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE3B841BB23B5E00F2471B /* Fade.swift */; };
@@ -57,7 +56,6 @@
 		517EFBFD1BA651FD0038A119 /* MentalFluxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalFluxUITests.swift; sourceTree = "<group>"; };
 		517EFBFF1BA651FD0038A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		519964A91BBDF45400386C4A /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
-		750446141BC0AF9A00A5B16E /* BufferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferViewController.swift; sourceTree = "<group>"; };
 		752409FA1BAC9ED40002BB8D /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = ../UserProfile.swift; sourceTree = "<group>"; };
 		75A357321BBF47C1007D1B09 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundViewController.swift; path = ../BackgroundViewController.swift; sourceTree = "<group>"; };
 		75AE3B841BB23B5E00F2471B /* Fade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fade.swift; path = ../Fade.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 		750446161BC0AFE900A5B16E /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				750446141BC0AF9A00A5B16E /* BufferViewController.swift */,
 				75A357321BBF47C1007D1B09 /* BackgroundViewController.swift */,
 				519964A91BBDF45400386C4A /* GraphViewController.swift */,
 			);
@@ -306,7 +303,6 @@
 				51612B5C1BC1EDE8008D8663 /* ScoreCoordinate.swift in Sources */,
 				75A357331BBF47C1007D1B09 /* BackgroundViewController.swift in Sources */,
 				517EFBE01BA651FD0038A119 /* ViewController.swift in Sources */,
-				750446151BC0AF9A00A5B16E /* BufferViewController.swift in Sources */,
 				517EFBDE1BA651FD0038A119 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
