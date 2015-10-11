@@ -36,9 +36,11 @@ class GraphViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         //print("viewWillAppear")
         
+        var scaleVar = 0
+        
         let currentScores = UserProfile.sharedProfile.currentScores()
         
-        //print(currentScores)
+        print(currentScores)
         
         var highestScore = 0
         
@@ -66,6 +68,7 @@ class GraphViewController: UIViewController {
         var radius:CGFloat = 0
         
         if highestScore > 0 {
+            
             radius = CGRectGetWidth(newView.frame) / CGFloat(3) / CGFloat(highestScore)
         }
         
@@ -79,45 +82,53 @@ class GraphViewController: UIViewController {
         
         ///////Edit here
         // Background octagon.
-        let backPolyLayer = drawBackgroundLayer(x: x, y: y,radius: radius * CGFloat(highestScore + 1), sides: 8, color: UIColor.grayColor().colorWithAlphaComponent(0.5))
+        let backPolyLayer = drawBackgroundLayer(x: x, y: y,radius: 130, sides: 8, color: UIColor.grayColor().colorWithAlphaComponent(0.5))
         //5
         newView.layer.addSublayer(backPolyLayer)
         
         
         // Buffer
-        let bufferPolyLayer = drawBufferLayer(x: x,y: y,radius: radius, sides: 8, color: UIColor.blackColor())
+        let bufferPolyLayer = drawBufferLayer(x: x,y: y,radius: 5, sides: 8, color: UIColor.blackColor())
         //5
         newView.layer.addSublayer(bufferPolyLayer)
         
         print("4")
-        
+        //////////////////////
         let pointKeyDictionary = polygonPointKeyDictionaryForScores(currentScores, x: x, y: y, radius: radius)
         
         var pointArray: [CGPoint] = []
         
         for (key, scoreCo) in pointKeyDictionary {
-            
+            ///////////////////////////////////////
             let scorePoint = pointForScore(CGFloat(scoreCo.score), origin: scoreCo.originPoint, angle: scoreCo.angle, radius: radius)
             pointArray.append(scorePoint)
             
             
-            let labelPoint = pointForScore(CGFloat(scoreCo.score) + 1, origin: scoreCo.originPoint, angle: scoreCo.angle, radius: radius)
+            let labelPoint = pointForScore(CGFloat(scoreCo.score) + 1, origin: scoreCo.originPoint, angle: scoreCo.angle, radius: radius + 0.13)
             
             let rect = CGRect(x: labelPoint.x - 11, y: labelPoint.y - 11, width: 22, height: 22)
             
-            
-            let keyLabel = UILabel(frame: rect)
-            keyLabel.text = key
-            keyLabel.textAlignment = NSTextAlignment.Center
-            keyLabel.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.25)
             //tap goes here
             //let tap = UITapGestureRecognizer(target: self, action: "setLabel()")
-
-            newView.addSubview(keyLabel)
+            let keyButton = UIButton(frame: rect)
+            keyButton.setTitle(key, forState: UIControlState.Normal)
+            keyButton.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.25)
+            /*
+            func buttonPressed(sender: UIButton)
+            {
+                var buttonTag: UIButton = sender
+                if buttonTag.tag == 1 {
+                    //do anything here
+                    qLabel.text = key
+                }
+            }
+            */
+            newView.addSubview(keyButton)
             
             
             // Draw spoke
-            let spokePoint = pointForScore(0, origin: scoreCo.originPoint, angle: scoreCo.angle, radius: radius)
+            ////////////////////////
+            let spokePoint = pointForScore(0, origin: scoreCo.originPoint, angle: scoreCo.angle, radius: 6)
 
             let path = CGPathCreateMutable()
             
@@ -221,65 +232,6 @@ func pointForScore(score: CGFloat, origin: CGPoint, angle: CGFloat, radius: CGFl
     
 }
 
-
-// 7 use scores from userprofile to
-func polygonPointArrayForScores(scores:Array<Int>,x:CGFloat,y:CGFloat,radius:CGFloat)->[CGPoint] {
-    print("polygonPointArrayForScores")
-    
-    let sides = scores.count;
-    
-    let angle = degree2radian(360/CGFloat(sides))
-    let cx = x // x origin
-    let cy = y // y origin
-    let r  = radius // radius of circle
-    var i = 0
-    var points = [CGPoint]()
-    
-    for score in scores {
-        
-        //create buffer zone
-        let floatScore = CGFloat(score) + 2 // Middle buffer
-        
-        let xpo = cx + (r * floatScore) * cos(angle * CGFloat(i))
-        let ypo = cy + (r * floatScore) * sin(angle * CGFloat(i))
-        //marks center point
-        points.append(CGPoint(x: xpo, y: ypo))
-        i++;
-    }
-    
-    return points
-}
-
-
-// 8 creates the path to be followed
-func polygonPath(x:CGFloat, y:CGFloat, radius:CGFloat, scores:Array<Int>) -> CGPathRef {
-    let path = CGPathCreateMutable()
-    
-    let points = polygonPointArrayForScores(scores, x: x, y: y, radius: radius)
-    let cpg = points[0]
-    
-    CGPathMoveToPoint(path, nil, cpg.x, cpg.y)
-    for p in points {
-        CGPathAddLineToPoint(path, nil, p.x, p.y)
-        //
-
-    }
-    CGPathCloseSubpath(path)
-    return path
-}
-
-// 9 create the object
-func drawPolygonLayer(x:CGFloat, y:CGFloat, radius:CGFloat, scores:Array<Int>, color:UIColor) -> CAShapeLayer {
-    
-    let shape = CAShapeLayer()
-    shape.path = polygonPath(x, y: y, radius: radius, scores: scores)
-    shape.strokeColor = color.CGColor
-    shape.fillColor = UIColor.clearColor().CGColor
-    shape.lineWidth = 5.0
-    
-    return shape
-}
-
 //Buffer zone layer creation
 func drawBufferLayer(x x:CGFloat, y:CGFloat, radius:CGFloat, sides:Int, color:UIColor) -> CAShapeLayer {
     
@@ -291,11 +243,6 @@ func drawBufferLayer(x x:CGFloat, y:CGFloat, radius:CGFloat, sides:Int, color:UI
     return shape
 }
 
-func setLabel()
-{
-    
-    
-}
 
 
 

@@ -14,6 +14,8 @@ class UserProfile {
     
     var userDictionary = [String: Int]()
     
+    var scoreDictionary = [String: Int]()
+    
     static let sharedProfile = UserProfile()
     private init() {
         load()
@@ -48,7 +50,6 @@ class UserProfile {
         
         // TODO - Pull list from QuestionStore
         
-        var scoreDictionary = [String: Int]()
         scoreDictionary = ["B":0, "IE":0, "IA":0, "L":0, "VE":0, "M":0, "N":0, "VI":0] 
         
         //add values to new dictionary
@@ -81,7 +82,7 @@ class UserProfile {
     
     func reset()
     {
-        
+        load()
         NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "UserDictionary")
         
     }
