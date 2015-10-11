@@ -113,6 +113,15 @@ class GraphViewController: UIViewController {
             let keyButton = UIButton(frame: rect)
             keyButton.setTitle(key, forState: UIControlState.Normal)
             keyButton.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.25)
+            
+            func buttonPressed(sender: UIButton)
+            {
+                
+                if var buttonTag = self.view.viewWithTag(1) as? UIButton {
+                    qLabel.text = "Bodily-kinesthetic"
+                }
+                
+            }
             /*
             func buttonPressed(sender: UIButton)
             {
