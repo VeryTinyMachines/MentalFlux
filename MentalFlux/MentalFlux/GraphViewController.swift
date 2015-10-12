@@ -99,7 +99,7 @@ class GraphViewController: UIViewController {
                 
                 if let index = orderedKeyArray.indexOf(key) {
                     keyButton.tag = index
-                }
+}
                 
                 keyButton.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchDown)
                 newView.addSubview(keyButton)
