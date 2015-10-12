@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var currentValue = 0
     var currentQuestionKey: String?
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -19,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     
     @IBAction func getNextQuestion(sender: AnyObject) {
+        
+        let currentValue = Int(roundf(slider!.value))
         
         // Save
         if let currentKey = currentQuestionKey {
@@ -50,12 +51,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func sliderChange(sender: UISlider) {
+        updateSliderLabel()
+    }
     
+    
+    func updateSliderLabel() {
         //pass value to questionvalue
-        currentValue = Int(roundf(sender.value))
+        let currentValue = Int(roundf(slider!.value))
         
-        switch currentValue
-        {
+        switch currentValue {
         case 0:
             sliderLabel.text = "Strongly Disagree"
         case 1:
@@ -75,14 +79,6 @@ class ViewController: UIViewController {
         }
     }
     
-    func labelChanger()
-    {
-        
-        
-
-        
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +91,9 @@ class ViewController: UIViewController {
         if let currentKey = currentQuestionKey {
             questionLabel.text = QuestionStore.sharedStore.randomQuestionForKey(currentKey)
         }
+        
+        print(slider!.value)
+        updateSliderLabel()
     }
     
     override func viewDidAppear(animated: Bool) {

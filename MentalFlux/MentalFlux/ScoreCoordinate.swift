@@ -9,9 +9,7 @@
 import UIKit
 
 class ScoreCoordinate {
-    
     var originPoint = CGPoint()
     var angle:CGFloat = 0
     var score:Int = 0
-    
 }

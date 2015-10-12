@@ -48,20 +48,11 @@ class UserProfile {
     
     func currentScores() -> [String: Int] {
         
-        // TODO - Pull list from QuestionStore
-        
         scoreDictionary = ["B":0, "IE":0, "IA":0, "L":0, "VE":0, "M":0, "N":0, "VI":0] 
         
-        //add values to new dictionary
         for (key, score) in userDictionary {
             scoreDictionary[key] = score
-//            for (key, value) in scoreDictionary{
-//                scoreDictionary[key] = userDictionary[key]
-//            }
         }
-        
-        
-        print("scoreDictionary: \(scoreDictionary)")
         
         return scoreDictionary
     }
@@ -80,11 +71,11 @@ class UserProfile {
         }
     }
     
-    func reset()
-    {
-        load()
+    
+    func reset() {
+        userDictionary = [String: Int]()
         NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "UserDictionary")
-        
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
 }

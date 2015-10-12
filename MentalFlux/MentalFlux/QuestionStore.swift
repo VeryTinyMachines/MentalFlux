@@ -11,6 +11,7 @@ import Foundation
 class QuestionStore {
     
     static let sharedStore = QuestionStore()
+    
     var questionDict = Dictionary<String, Array<String>>()
     
     func questionSetPlistPath() -> String? {
@@ -23,24 +24,20 @@ class QuestionStore {
     }
     
     
-    //Load Data
-    func loadPlist()
-    {
+    func loadPlist() {
         if let path = questionSetPlistPath() {
-            if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String, Array<String>>
-            {
+            if let dict = NSDictionary(contentsOfFile: path) as? Dictionary<String, Array<String>> {
                 for (key, value) in dict {
                     questionDict[key] = value
                 }
             }
         } else {
-            print("Error: Question Set Plist Path not found", terminator: "\n")
+            print("Error: Question Set Plist path not found", terminator: "\n")
         }
     }
     
     
-    func randomQuestionForKey(key:String) -> (String?)
-     {
+    func randomQuestionForKey(key:String) -> (String?) {
         if let array = questionSetForKey(key) {
             // Array - String
             let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
@@ -53,20 +50,41 @@ class QuestionStore {
     }
 
     
-    //input sting containing question type and it will return questions of said type
-    func questionSetForKey(key:String) -> Array<String>?
-    {
+    func questionSetForKey(key:String) -> Array<String>? {
         return questionDict[key]
     }
     
-    func returnRandomKey() -> String?
-    {
+    
+    func intelligenceNameForKey(key:String) -> String? {
+        switch key {
+        case "B":
+            return "Bodily-kinesthetic"
+        case "IE":
+            return "Interpersonal"
+        case "IA":
+            return "Intrapersonal"
+        case "L":
+            return "Linguistic"
+        case "VE":
+            return "Logical-Mathematica"
+        case "M":
+            return "Musical"
+        case "N":
+            return "Naturalist"
+        case "VI":
+            return "Spatial"
+        default:
+            return nil
+        }
+    }
+    
+    
+    func returnRandomKey() -> String? {
         
         let array = [String](questionDict.keys)
         let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
         
-        if randomIndex <= array.count
-        {
+        if randomIndex <= array.count {
             return array[randomIndex]
         }
         return nil;
